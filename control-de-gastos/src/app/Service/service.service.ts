@@ -23,11 +23,15 @@ export class ServiceService {
   }
 
   getProductoId(id: number){
-      return this.http.get<Producto>(this.baseUrl+"/"+id);
+      return this.http.get<Producto[]>(this.baseUrl+"/"+id);
   }
 
   updateProducto(producto: Producto){
     return this.http.put<Producto>(this.baseUrl, producto); //aqui varea dependiendo la construccion del metodo en el backend
+  }
+
+  deleteProducto(producto:Producto){
+    return this.http.delete<Producto>(this.baseUrl+"/"+producto.id);
   }
 
   /*

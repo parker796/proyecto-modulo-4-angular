@@ -10,8 +10,7 @@ import { ServiceService } from 'src/app/Service/service.service';
 })
 export class EditarComponent implements OnInit {
 
-  producto :Producto=new Producto();
-
+  producto!:Producto[];
   constructor(private router:Router,private service:ServiceService) { }
 
   ngOnInit() {
@@ -23,7 +22,7 @@ export class EditarComponent implements OnInit {
     this.service.getProductoId(+id)
     .subscribe(data => {
     //  console.log("nos manda un sucess", data);
-      this.producto = data;
+      this.producto = data
       console.log("producto", this.producto);
     }), (error: any) => {
       console.log('error : ', error);
@@ -34,7 +33,7 @@ export class EditarComponent implements OnInit {
   Actualizar(producto:Producto){
     this.service.updateProducto(producto)
     .subscribe(data=>{
-      this.producto=data;
+      this.producto[0]=data;
       alert("Se Actualizo con Exito...!!!");
       this.router.navigate(["listar"]);
     })

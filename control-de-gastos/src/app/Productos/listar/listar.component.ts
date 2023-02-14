@@ -23,4 +23,14 @@ export class ListarComponent {
     localStorage.setItem("id", producto.id.toString());
     this.router.navigate(["editar"]);
   }
+
+  Delete(producto:Producto){
+    this.service.deleteProducto(producto)
+    .subscribe(data => {
+      this.productos = this.productos.filter(p=>p!==producto) //en lugar de que el backend devuelva
+      //un string que era como lo tenia devuelve como si fuera un get de toda las listas 
+      alert("producto eliminado")
+    })
+  }
+
 }
