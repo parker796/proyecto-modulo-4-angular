@@ -9,14 +9,20 @@ import { Producto } from 'src/app/Modelo/Producto';
   styleUrls: ['./agregar.component.scss']
 })
 export class AgregarComponent {
-
+  modelProducto = new Producto();
+  
   constructor(private router:Router, private service:ServiceService){}
   productos!:Producto;
 
   ngOnInit(){
-    this.service.createProducto()
-    .subscribe( data => {
-      this.productos = data;
+  }
+
+  Guardar(producto:Producto){
+    this.service.createProducto(producto)
+    .subscribe(data => {
+      alert('Se agrego con exito');
+      this.router.navigate(['listar']);
     })
   }
+
 }

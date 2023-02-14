@@ -3,4 +3,5 @@ export class Producto{
     disco!: string;
     memoriaRam!:string;
     procesador!:string;
+    constructor(){}
 }

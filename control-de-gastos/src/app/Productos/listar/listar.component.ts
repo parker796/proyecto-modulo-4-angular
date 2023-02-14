@@ -15,6 +15,12 @@ export class ListarComponent {
       this.service.getProductos()
       .subscribe( data => {
         this.productos = data;
+        //alert(data[0].id + " " + data[0].disco + " " + data[0].memoriaRam + " " + data[0].procesador);
       })
+  }
+  Editar(producto:Producto):void{
+    //guardamos el id de la fila seleccionada en localstorage
+    localStorage.setItem("id", producto.id.toString());
+    this.router.navigate(["editar"]);
   }
 }

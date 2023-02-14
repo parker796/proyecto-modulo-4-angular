@@ -22,6 +22,14 @@ export class ServiceService {
     return this.http.post<Producto>(this.baseUrl, producto);
   }
 
+  getProductoId(id: number){
+      return this.http.get<Producto>(this.baseUrl+"/"+id);
+  }
+
+  updateProducto(producto: Producto){
+    return this.http.put<Producto>(this.baseUrl, producto); //aqui varea dependiendo la construccion del metodo en el backend
+  }
+
   /*
   getProductos(): Observable<Producto[]> {
     return this.http.get<Producto[]>(baseUrl);
