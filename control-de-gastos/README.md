@@ -1,7 +1,7 @@
 # **Tienda de Computadoras Spring boot**
 
 ## Descripcion
-Tenemos ya nuestro proyecto en desarrollo con angular, en este caso utilize como backend de prueba un proyecto del mismo desarrollo que hemos hecho pero falta por agregarle mas cosas a mi proyecto de angular como jwt pero ahora ya esta estructurado, puede probarlo con el siguiente repo que tengo donde estuve trabajando a mis servicios crud que tengo.
+Tenemos ya nuestro proyecto en desarrollo con angular, en este caso utilize como backend de prueba un proyecto del mismo desarrollo que hemos hecho pero falta por agregarle mas cosas a mi proyecto de angular como jwt pero ya esta estructurado, puede probarlo con el siguiente repositorio que tengo donde estuve trabajando mis servicios que llevo hasta ahorita
 
 ```
 ```sh
